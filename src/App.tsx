@@ -1,19 +1,34 @@
 import React, { Component } from 'react';
-import './App.css';
-
+import  './index.css';
 
 class TicTacToe extends Component{
   render(){
     return (
-      <div> Hello from React! </div>
+      <div className='grid'>
+        <Square position={0}/>
+        <Square position={1}/>
+        <Square position={2}/>
+        <Square position={3}/>
+        <Square position={4}/>
+        <Square position={5}/>
+        <Square position={6}/>
+        <Square position={7}/>
+        <Square position={8}/>
+
+      </div>
     );
   }
 }
 
-class Square extends Component{
+interface ISquare{
+  position: number
+}
+
+class Square extends Component<ISquare>{
   render(){
+    const {position} = this.props
     return (
-      <div>Square</div>
+      <div className='square'>{position} </div>
     )
   }
 }
