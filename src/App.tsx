@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class TicTacToe extends Component{
+  render(){
+    return (
+      <div> Hello from React! </div>
+    );
+  }
 }
 
-export default App;
+class Square extends Component{
+  render(){
+    return (
+      <div>Square</div>
+    )
+  }
+}
+
+class Circle extends Component{
+  render(){
+    return (
+      <div>Circle</div>
+    )
+  }
+}
+
+class Cross extends Component{
+  render(){
+    return(
+      <div>Cross</div>
+    )
+  }
+}
+
+class Result extends Component{
+  render(){
+    return(
+      <div>Result</div>
+    )
+  }
+}
+
+export default TicTacToe;
