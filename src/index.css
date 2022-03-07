@@ -28,3 +28,14 @@ body {
   justify-content: center;
   background-color: white;
 }
+
+svg{
+  stroke-width: 15px;
+  stroke: #FF665C;
+  fill: none;
+  stroke-linecap: round;
+}
+
+.cross {
+  stroke: #EC088E;
+}

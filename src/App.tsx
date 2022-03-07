@@ -60,7 +60,9 @@ class Square extends Component<ISquare>{
 class Circle extends Component{
   render(){
     return (
-      <div>Circle</div>
+      <svg width={100} height={100} viewBox="-50 -50 100 100" className='circle'>
+        <circle cx={0} cy={0} r={40}/>  
+      </svg>
     )
   }
 }
@@ -68,7 +70,10 @@ class Circle extends Component{
 class Cross extends Component{
   render(){
     return(
-      <div>Cross</div>
+      <svg width={100} height={100} viewBox="-50 -50 100 100" className='cross'>
+        <line x1={-40} y1={-40} x2={40} y2={40}></line>
+        <line x1={-40} y1={40} x2={40} y2={-40}></line>
+      </svg>
     )
   }
 }
