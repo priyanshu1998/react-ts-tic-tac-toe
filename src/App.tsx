@@ -50,7 +50,7 @@ class TicTacToe extends Component<{}, GameState>{
           <Square position={8} value={this.state.positions[8]} cb={this.onClickEvent} />
         </div>
         <div>
-          {(winner == "CIRCLE" || winner == "CROSS") && <Result winner={winner} />}
+          {(winner != "NO RESULT") && <Result winner={winner} />}
         </div>
       </div>
     );
@@ -144,9 +144,12 @@ class Result extends Component<{ winner: string }> {
 
   render() {
     const { winner } = this.props;
-    return (
-      <div>{winner} won the game. </div>
-    )
+    if (winner == CIRCLE || winner == CROSS) {
+      return (
+        <div>{winner} won the game. </div>
+      )
+    }
+    return <div>The game ended in a draw.</div>
   }
 }
 
